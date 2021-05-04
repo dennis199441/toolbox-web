@@ -2,7 +2,7 @@
   "name": "toolbox-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dennis199441.github.io",
+  "homepage": "http://dennis199441.github.io/toolbox-web",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/data-grid": "^4.0.0-alpha.19",
