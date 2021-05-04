@@ -1,6 +1,6 @@
 import React from "react";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 import { SecureRoute, PublicRoute, NotFound } from './common';
 import { About, Home, PublicBlog, SignIn, SignUp } from './public';
@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter basename="/toolbox-web">
         <div>
           <Switch>
             <PublicRoute restricted={false} component={Home} path="/" exact />
@@ -39,7 +39,7 @@ function App() {
             <Route component={NotFound} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </MuiThemeProvider>
   );
 }
