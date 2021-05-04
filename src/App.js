@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="/toolbox-web">
         <div>
           <Switch>
             <PublicRoute restricted={false} component={Home} path="/" exact />
