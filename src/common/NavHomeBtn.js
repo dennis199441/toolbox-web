@@ -11,10 +11,10 @@ export default function NavHomeBtn() {
     return (
         <div>
             { width > 700 ?
-                <Link href="/">
+                <Link href="/toolbox-web">
                     < img src={logo} alt="CodingDaily.dev" />
                 </Link > :
-                <Link href="/">
+                <Link href="/toolbox-web">
                     < img src={icon} alt="CodingDaily.dev" />
                 </Link >
             }

@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <HashRouter basename="/toolbox-web">
+      <HashRouter>
         <div>
           <Switch>
             <PublicRoute restricted={false} component={Home} path="/" exact />
