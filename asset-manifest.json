@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/toolbox-web/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/toolbox-web/static/js/main.73283c72.chunk.js",
-    "main.js.map": "/toolbox-web/static/js/main.73283c72.chunk.js.map",
+    "main.js": "/toolbox-web/static/js/main.b288487f.chunk.js",
+    "main.js.map": "/toolbox-web/static/js/main.b288487f.chunk.js.map",
     "runtime-main.js": "/toolbox-web/static/js/runtime-main.fa12485b.js",
     "runtime-main.js.map": "/toolbox-web/static/js/runtime-main.fa12485b.js.map",
     "static/css/2.1beaf320.chunk.css": "/toolbox-web/static/css/2.1beaf320.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.1beaf320.chunk.css",
     "static/js/2.46890d80.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.73283c72.chunk.js"
+    "static/js/main.b288487f.chunk.js"
   ]
 }
