@@ -3,7 +3,7 @@ import { httpGet, httpPost, httpDelete } from './http';
 
 // Private API
 export const changeUsername = async (username) => {
-  let url = 'http://127.0.0.1:8080/user/change_username';
+  let url = 'https://codingdaily.dev/oauth/user/change_username';
   let form = new FormData();
   form.append('username', username);
   const data = await httpPost(url, form);
@@ -11,7 +11,7 @@ export const changeUsername = async (username) => {
 }
 
 export const changePassword = async (oldPassword, newPassword) => {
-  let url = 'http://127.0.0.1:8080/user/change_password';
+  let url = 'https://codingdaily.dev/oauth/user/change_password';
   let form = new FormData();
   form.append('oldPassword', oldPassword);
   form.append('newPassword', newPassword);
@@ -20,49 +20,49 @@ export const changePassword = async (oldPassword, newPassword) => {
 }
 
 export const activateUser = async (username) => {
-  let url = 'http://127.0.0.1:8080/user/activate/' + username;
+  let url = 'https://codingdaily.dev/oauth/user/activate/' + username;
   const data = await httpGet(url);
   return data === "activated user: " + username;
 }
 
 export const deactivateUser = async (username) => {
-  let url = 'http://127.0.0.1:8080/user/deactivate/' + username;
+  let url = 'https://codingdaily.dev/oauth/user/deactivate/' + username;
   const data = await httpGet(url);
   return data === "deactivated user: " + username;
 }
 
 export const getCurrentUser = async () => {
-  let url = 'http://127.0.0.1:8080/user/me';
+  let url = 'https://codingdaily.dev/oauth/user/me';
   return await httpGet(url);
 }
 
 export const getUsers = async () => {
-  let url = 'http://127.0.0.1:8080/user/';
+  let url = 'https://codingdaily.dev/oauth/user/';
   return await httpGet(url);
 }
 
 export const getUserDetails = async (username) => {
-  let url = 'http://127.0.0.1:8080/user/' + username;
+  let url = 'https://codingdaily.dev/oauth/user/' + username;
   return await httpGet(url);
 }
 
 export const getRoles = async () => {
-  let url = 'http://127.0.0.1:8080/role/';
+  let url = 'https://codingdaily.dev/oauth/role/';
   return await httpGet(url);
 }
 
 export const getRoleByName = async (name) => {
-  let url = 'http://127.0.0.1:8080/role/' + name;
+  let url = 'https://codingdaily.dev/oauth/role/' + name;
   return await httpGet(url);
 }
 
 export const getUserRoles = async (username) => {
-  let url = 'http://127.0.0.1:8080/userrole/' + username;
+  let url = 'https://codingdaily.dev/oauth/userrole/' + username;
   return await httpGet(url);
 }
 
 export const createRole = async (name, description) => {
-  let url = 'http://127.0.0.1:8080/role/';
+  let url = 'https://codingdaily.dev/oauth/role/';
   let form = new FormData();
   form.append('name', name);
   form.append('description', description);
@@ -70,14 +70,14 @@ export const createRole = async (name, description) => {
 }
 
 export const deleteRole = async (name) => {
-  let url = 'http://127.0.0.1:8080/role/';
+  let url = 'https://codingdaily.dev/oauth/role/';
   let form = new FormData();
   form.append('name', name);
   return await httpDelete(url, form);
 }
 
 export const grantRole = async (userId, roleId) => {
-  let url = 'http://127.0.0.1:8080/userrole/';
+  let url = 'https://codingdaily.dev/oauth/userrole/';
   let form = new FormData();
   form.append('user_id', userId);
   form.append('role_id', roleId);
@@ -85,7 +85,7 @@ export const grantRole = async (userId, roleId) => {
 }
 
 export const revokeRole = async (userId, roleId) => {
-  let url = 'http://127.0.0.1:8080/userrole/';
+  let url = 'https://codingdaily.dev/oauth/userrole/';
   let form = new FormData();
   form.append('user_id', userId);
   form.append('role_id', roleId);
@@ -102,7 +102,7 @@ export const signUp = async (username, email, password) => {
 
   await axios({
     method: 'post',
-    url: 'http://127.0.0.1:8080/user/',
+    url: 'https://codingdaily.dev/oauth/user/',
     data: form
   });
 }
@@ -114,7 +114,7 @@ export const login = async (username, password) => {
 
   let response = await axios({
     method: 'post',
-    url: 'http://127.0.0.1:8080/auth/login',
+    url: 'https://codingdaily.dev/oauth/auth/login',
     data: form
   });
 

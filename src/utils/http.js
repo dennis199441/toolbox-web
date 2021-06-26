@@ -105,7 +105,7 @@ const refreshToken = async () => {
     let refresh_token = "Bearer " + localStorage.getItem("refresh_token");
     let response = await axios({
         method: 'post',
-        url: 'http://127.0.0.1:8080/auth/refresh',
+        url: 'https://codingdaily.dev/oauth/auth/refresh',
         headers: { 'Authorization': refresh_token }
     })
     let access_token = response.data.access_token;
