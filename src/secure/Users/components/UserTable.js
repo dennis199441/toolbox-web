@@ -64,8 +64,8 @@ export default function UserTable() {
 
   const classes = useStyles();
 
-  const onSelectionChange = (newSelection) => {
-    setSelected(newSelection.rowIds);
+  const onSelectionModelChange = (newSelection) => {
+    setSelected(newSelection.selectionModel);
   }
 
   const handleActivate = () => {
@@ -109,7 +109,7 @@ export default function UserTable() {
     <React.Fragment>
       <Title>Users</Title>
       <div style={{ height: 650, width: 1200 }}>
-        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionChange={onSelectionChange} />
+        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionModelChange={onSelectionModelChange} />
       </div>
       <div className={classes.seeMore}>
         <Button onClick={handleActivate} color="primary">Activate</Button>
