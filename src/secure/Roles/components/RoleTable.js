@@ -55,8 +55,8 @@ export default function RoleTable() {
 
   const classes = useStyles();
 
-  const onSelectionChange = (newSelection) => {
-    setSelected(newSelection.rowIds);
+  const onSelectionModelChange = (newSelection) => {
+    setSelected(newSelection.selectionModel);
   }
 
   const handleCreate = () => {
@@ -84,7 +84,7 @@ export default function RoleTable() {
     <React.Fragment>
       <Title>Roles</Title>
       <div style={{ height: 650, width: 1200 }}>
-        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionChange={onSelectionChange} />
+        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionModelChange={onSelectionModelChange} />
       </div>
       <div className={classes.seeMore}>
         <Button onClick={handleCreate} color="primary">Create</Button>
