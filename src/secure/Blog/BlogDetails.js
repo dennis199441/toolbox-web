@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         overflow: 'visible',
         flexDirection: 'column',
-        width: 1200,
+        minWidth: '85vw',
     },
     fixedHeight: {
         height: 240,
@@ -47,9 +47,9 @@ export default function BlogDetails() {
             <CssBaseline />
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <Container maxWidth="lg" className={classes.container}>
+                <Container maxWidth="false" className={classes.container}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} md={12} lg={12}>
                             <Paper className={classes.paper}>
                                 <BlogForm username={username} />
                             </Paper>

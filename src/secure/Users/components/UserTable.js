@@ -15,25 +15,25 @@ const columns = [
   {
     field: 'name',
     headerName: 'Username',
-    width: 200,
+    flex: 1,
     renderCell: (params) => {
       let url = "/secure/users/" + params.value;
       return <Link to={url}>{params.value}</Link>
     },
   },
-  { field: 'email', headerName: 'Email', width: 350 },
-  { field: 'activate', headerName: 'Activate', width: 150 },
+  { field: 'email', headerName: 'Email', flex: 2 },
+  { field: 'activate', headerName: 'Activate', flex: 1 },
   {
     field: 'createAt',
     headerName: 'Created At',
     sortable: true,
-    width: 200,
+    flex: 1
   },
   {
     field: 'lastLogin',
     headerName: 'Last Login',
     sortable: true,
-    width: 200,
+    flex: 1
   },
 ];
 
@@ -108,7 +108,7 @@ export default function UserTable() {
   return (
     <React.Fragment>
       <Title>Users</Title>
-      <div style={{ height: 650, width: 1200 }}>
+      <div style={{ height: '70vh', width: '100%' }}>
         <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionModelChange={onSelectionModelChange} />
       </div>
       <div className={classes.seeMore}>

@@ -17,30 +17,30 @@ const columns = [
   {
     field: 'title',
     headerName: 'Title',
-    width: 370,
+    flex: 1,
     renderCell: (params) => {
       let url = "/secure/blog/" + params.row.id;
       return <Link to={url}>{params.value}</Link>
     },
   },
-  { field: 'author', headerName: 'Author', width: 200 },
+  { field: 'author', headerName: 'Author', flex: 0.5 },
   {
     field: 'published',
     headerName: 'Published',
     sortable: true,
-    width: 135,
+    flex: 0.2
   },
   {
     field: 'createAt',
     headerName: 'Create At',
     sortable: true,
-    width: 200,
+    flex: 0.5
   },
   {
     field: 'updateAt',
     headerName: 'Update At',
     sortable: true,
-    width: 200,
+    flex: 0.5
   },
 ];
 
@@ -106,7 +106,7 @@ export default function BlogTable() {
   return (
     <React.Fragment>
       <Title>Blog</Title>
-      <div style={{ height: 650, width: 1200 }}>
+      <div style={{ height: '70vh', width: '100%' }}>
         <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionChange={onSelectionChange} />
       </div>
       <div className={classes.seeMore}>

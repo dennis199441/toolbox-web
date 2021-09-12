@@ -10,7 +10,7 @@ import { formatDate } from '../../utils';
 
 const useStyles = makeStyles({
   desktopRoot: {
-    width: '60vw',
+    width: '50vw',
     marginTop: 10,
     marginBottom: 10,
   },
@@ -39,7 +39,7 @@ export default function BlogCard(props) {
   return (
     <Card className={width > 700 ? classes.desktopRoot : classes.mobileRoot}>
       <CardContent>
-        <Typography variant="h5" component="h2">
+        <Typography variant="h4" component="h2">
           {props.title}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">

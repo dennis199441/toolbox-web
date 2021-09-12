@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         overflow: 'auto',
         flexDirection: 'column',
+        minWidth: '85vw',
     },
     fixedHeight: {
         height: 240,
@@ -44,7 +45,7 @@ export default function Users() {
             <CssBaseline />
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <Container maxWidth="lg" className={classes.container}>
+                <Container maxWidth="false" className={classes.container}>
                     <Grid container spacing={3}>
                         {/* Recent Orders */}
                         <Grid item xs={12}>

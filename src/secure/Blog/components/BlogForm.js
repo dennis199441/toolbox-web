@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import { useHistory, useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, ContentState, convertToRaw } from 'draft-js';
@@ -25,10 +26,11 @@ const useStyles = makeStyles((theme) => ({
   },
   editor: {
     margin: theme.spacing(2, 1, 2),
-    height: 550
+    height: '70vh'
   },
   button: {
-    margin: theme.spacing(0, 62, 0),
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 
@@ -124,7 +126,7 @@ export default function BlogForm(props) {
         />
         <div className={classes.editor}>
           <Editor
-            editorStyle={{ border: "1px solid #d4d4d4", height: 450, borderRadius: 5, overflowY: "auto" }}
+            editorStyle={{ border: "1px solid #d4d4d4", height: '65vh', borderRadius: 5, overflowY: "auto" }}
             editorState={editorState}
             wrapperClassName="blog-wrapper"
             editorClassName="blog-editor"
@@ -133,14 +135,14 @@ export default function BlogForm(props) {
             onEditorStateChange={onEditorStateChange}
           />
         </div>
-        <div className={classes.button}>
-          <Button type="submit" variant="text" color="primary">
+        <Container className={classes.button}>
+          <Button type="submit" variant="text" color="primary" size="large">
             Submit
           </Button>
-          <Button type="button" variant="text" color="secondary" onClick={handleCancel}>
+          <Button type="button" variant="text" color="secondary" size="large" onClick={handleCancel}>
             Cancel
           </Button>
-        </div>
+        </Container>
       </form>
     </React.Fragment>
   );

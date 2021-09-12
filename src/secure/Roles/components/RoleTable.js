@@ -12,19 +12,19 @@ function createData(id, name, desc, createAt, updateAt) {
 }
 
 const columns = [
-  { field: 'name', headerName: 'Name', width: 200 },
-  { field: 'desc', headerName: 'Description', width: 500 },
+  { field: 'name', headerName: 'Name', flex: 1 },
+  { field: 'desc', headerName: 'Description', flex: 2 },
   {
     field: 'createAt',
     headerName: 'Created At',
     sortable: true,
-    width: 200,
+    flex: 1,
   },
   {
     field: 'updateAt',
     headerName: 'Updated At',
     sortable: true,
-    width: 200,
+    flex: 1
   },
 ];
 
@@ -83,7 +83,7 @@ export default function RoleTable() {
   return (
     <React.Fragment>
       <Title>Roles</Title>
-      <div style={{ height: 650, width: 1200 }}>
+      <div style={{ height: '70vh', width: '100%' }}>
         <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection onSelectionModelChange={onSelectionModelChange} />
       </div>
       <div className={classes.seeMore}>
