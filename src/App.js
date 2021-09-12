@@ -4,7 +4,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 import { SecureRoute, PublicRoute, NotFound } from './common';
 import { About, Home, PublicBlog, SignIn, SignUp } from './public';
-import { Profile, Dashboard, Users, UserDetails, Blog, BlogDetails, Roles, RoleDetails } from './secure';
+import { Profile, Dashboard, Users, UserDetails, Blog, BlogDetails, Roles, RoleDetails, Videos } from './secure';
 
 const theme = createMuiTheme({
   palette: {
@@ -36,6 +36,7 @@ function App() {
             <SecureRoute component={BlogDetails} path="/secure/blog/:id" exact />
             <SecureRoute component={Roles} path="/secure/roles" exact />
             <SecureRoute component={RoleDetails} path="/secure/roles/create" exact />
+            <SecureRoute component={Videos} path="/secure/videos" exact />
             <Route component={NotFound} />
           </Switch>
         </div>

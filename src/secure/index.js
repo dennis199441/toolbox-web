@@ -6,5 +6,6 @@ import Blog from './Blog/Blog';
 import BlogDetails from './Blog/BlogDetails';
 import Roles from './Roles/Roles';
 import RoleDetails from './Roles/RoleDetails';
+import Videos from './Videos/Videos';
 
-export { Profile, Dashboard, Users, UserDetails, Blog, BlogDetails, Roles, RoleDetails };
+export { Profile, Dashboard, Users, UserDetails, Blog, BlogDetails, Roles, RoleDetails, Videos };
