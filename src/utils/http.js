@@ -2,13 +2,14 @@ import axios from 'axios';
 
 const MAX_RETRY = 1;
 
-export const httpGet = async (url) => {
+export const httpGet = async (url, responseType = 'json') => {
     const access_token = 'Bearer ' + localStorage.getItem("access_token");
     let i = 0;
     while (i < MAX_RETRY) {
         try {
             let response = await axios({
                 method: 'get',
+                responseType: responseType,
                 url: url,
                 headers: { 'Authorization': access_token }
             });

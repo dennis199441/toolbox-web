@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { DataGrid } from '@material-ui/data-grid';
 import Button from '@material-ui/core/Button';
+import DownloadButton from './DownloadButton';
 import Title from './Title';
 import { getAllProcesses, getAllProcessTypes } from '../../../utils/video';
 
@@ -12,7 +13,6 @@ function createData(id, filename, hashed_name, status, ptype, createAt, updateAt
 }
 
 const columns = [
-  { field: 'id', headerName: 'ID', flex: 0.5 },
   { field: 'filename', headerName: 'Filename', flex: 1 },
   { field: 'ptype', headerName: 'Process Type', flex: 1 },
   { field: 'hashed_name', headerName: 'Hash', flex: 2 },
@@ -29,6 +29,14 @@ const columns = [
     sortable: true,
     flex: 1
   },
+  {
+    field: 'id',
+    headerName: 'Download',
+    flex: 0.5,
+    renderCell: (params) => {
+      return <DownloadButton id={params.value} />;
+    }
+  }
 ];
 
 const useStyles = makeStyles((theme) => ({
